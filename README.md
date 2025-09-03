@@ -6,8 +6,6 @@ Welcome to my personal portfolio website, built using **React**, **Framer Motion
 
 👉 [View Portfolio on Vercel](https://my-portfolio-beta-sandy-61.vercel.app/)
 
-> Replace the above URL with your actual Vercel deployment link once it's live.
-
 ---
 
 ## 📸 Preview
