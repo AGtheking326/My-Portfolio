@@ -23,7 +23,6 @@ export const Projects = () => {
         "A simple review page built with React 19 to display user testimonials and ratings.",
       tech: ["React 19", "React Router", "TailwindCSS"],
       link: "https://github.com/AGtheking326/review-page",
-      // liveLink: "https://your-live-demo-url.com", // optionally add live demo link
     },
     {
       title: "BuddyAI",
@@ -56,6 +55,15 @@ export const Projects = () => {
         "A 3D landing page for a tech product, built with Three.js for immersive experience.",
       tech: ["Three.js", "React", "TailwindCSS"],
       link: "https://github.com/AGtheking326/cyber-visor",
+    },
+    {
+      title: "Image Enhancer",
+      image: "/projects/ImageEnhancer.png", 
+      description:
+        "An AI-powered web app that lets users upload an image and enhance it using an external API. Features dark mode, real-time previews, and a smooth UI.",
+      tech: ["React (Vite)", "TailwindCSS", "Axios", "Framer Motion"],
+      link: "https://github.com/AGtheking326/ImageEnhancer",
+      liveLink: "https://image-enhancer-opal.vercel.app/" 
     },
   ];
 
@@ -93,7 +101,7 @@ export const Projects = () => {
             className="project-card"
             variants={fadeInUp}
             whileHover={{ y: -10, transition: { duration: 0.2 } }}
-            style={{ textDecoration: "none" }} // remove underline on whole card
+            style={{ textDecoration: "none" }}
           >
             <motion.div
               className="project-image"
@@ -107,21 +115,28 @@ export const Projects = () => {
                 <span key={i}>{techItem}</span>
               ))}
             </div>
-            {/* Optional buttons container */}
             <div style={{ padding: "1.5rem" }}>
-              {/* "View Code" button */}
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-secondary"
                 style={{ marginTop: "1rem", display: "inline-block" }}
-                onClick={(e) => e.stopPropagation()} // prevent card click from firing
+                onClick={(e) => e.stopPropagation()}
               >
                 View Code
               </a>
-
-             
+              {/* Optional: live demo button */}
+              {/* <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-primary"
+                style={{ marginLeft: "1rem", display: "inline-block" }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                Live Demo
+              </a> */}
             </div>
           </motion.a>
         ))}
